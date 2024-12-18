@@ -71,7 +71,7 @@ endif
 # Can't do this using an argument, we have to create a PLI table file
 # enabling write access to the design
 $(SIM_BUILD)/pli.tab : | $(SIM_BUILD)
-	echo "acc+=rw,wn:*" > $@
+	echo 'acc+=rw,wn:*' > $@
 
 # Compilation phase
 $(SIM_BUILD)/simv: $(VERILOG_SOURCES) $(SIM_BUILD)/pli.tab $(CUSTOM_COMPILE_DEPS) | $(SIM_BUILD)
